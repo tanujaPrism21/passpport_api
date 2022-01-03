@@ -15,7 +15,7 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'mysql'),
+    'default' => env('DB_CONNECTION', 'mongodb'),
 
     /*
     |--------------------------------------------------------------------------
@@ -42,6 +42,11 @@ return [
             'prefix' => '',
             'foreign_key_constraints' => env('DB_FOREIGN_KEYS', true),
         ],
+            'mongodb' => [
+                'driver' => 'mongodb',
+                'dsn'=>'mongodb+srv://pigeon_user:Prism2020@cluster0.ww757.mongodb.net/mic_robotics?retryWrites=true&w=majority',
+                'database' => 'mic_robotics',
+            ],
 
         'mysql' => [
             'driver' => 'mysql',
